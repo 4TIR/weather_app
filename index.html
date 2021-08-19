@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather app</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+  <div class="app-wrap">
+    <header>
+      <button type="button" class="bg" onclick="changeImage()"><i class="fa fa-refresh"></i></button>
+      <button type="button"  class="fahrenheit" onclick="javascript:btnClickF()" disabled='true'>F</button>
+      <button type="button"  class="celsius" onclick="javascript:btnClickC()" disabled='true'>C</button>
+      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+    </header>
+    <main>
+      <section class="location">
+        <div class="city"></div>
+        <div class="date"></div>
+      </section>
+      <div class="current">
+        <div class="temp" id="temp"><span></span></div>
+        <div class="weather"></div>
+        <div class="hi-low"></div>
+        <div class="latitude"><span></span></div>
+        <div class="longitude"><span></span></div>  
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d39980.645637670736!2d22.5148928!3d51.2229376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2spl!4v1629382070372!5m2!1suk!2spl" allowfullscreen="" loading="lazy">
+        </iframe>
+      </main>
+      </div>
+  </div>
+  <p class="info"></p>
+  <script src="js/main.js"></script>
+</body>
+</html>
