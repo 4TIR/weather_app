@@ -71,7 +71,7 @@ function displayResults(weather) {
 
   let longitude = document.querySelector(".longitude");
   longitude.innerText = `Longitude: ${weather.coord.lon}`;
-
+  initMap(weather.coord.lat,weather.coord.lon);
   btn2.setAttribute("disabled", true);
   btn1.removeAttribute("disabled");
 }
@@ -132,4 +132,16 @@ function changeImage() {
   } else {
     i = 0;
   }
+}
+
+function initMap(latitude=42.1382114,longitude=-71.5212585) {
+  
+  var macc = {lat: latitude, lng: longitude};
+
+  var map = new google.maps.Map(
+
+      document.getElementById('map'), {zoom: 8, center: macc});
+
+  var marker = new google.maps.Marker({position: macc, map: map});
+
 }
