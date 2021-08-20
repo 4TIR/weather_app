@@ -64,12 +64,13 @@ main {
   align-items: center;
   text-align: center;
 }
-
-iframe {
-  width: 600px;
-  height: 450px;
-  border-radius: 25%;
+#map {
+  width: 500px;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 20px;
 }
+
 .location .city {
   color: #fff;
   font-size: 32px;
